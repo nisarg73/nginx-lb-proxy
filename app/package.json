@@ -1,0 +1,23 @@
+{
+  "name": "nginx-lb-proxy",
+  "version": "1.0.0",
+  "description": "A dockerised nginx load balancer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nisarg73/nginx-lb-proxy.git"
+  },
+  "author": "Nisarg Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nisarg73/nginx-lb-proxy/issues"
+  },
+  "homepage": "https://github.com/nisarg73/nginx-lb-proxy#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
