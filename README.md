@@ -55,6 +55,8 @@ You can read about more parameters on [loadtest repo](https://github.com/alexfer
 
 3. After this, in the terminal you ran the containers, you can clearly see how each request is first going to the proxy server and then subsequently redirected to one of the app servers!
 
+![lb-demo](lb-demo.gif)
+
 ---
 
 ## How it works?
