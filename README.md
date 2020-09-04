@@ -99,3 +99,11 @@ d3222e0a4ed5        nginx-lb-proxy_app     "docker-entrypoint.s…"   35 minutes
 ```
 
 - Now finally, in `proxy.conf` we defined the proxy server to listen to its `port 80` and redirect all the requests to app server. Since we are having multiple app in our `load-balancer` network, proxy server will use DNS resolver to decide the ip address of the app server to which it will redirect the request.
+
+---
+
+## Misc
+
+1. Performances of a single server vs multiple servers using `loadtest`.
+    - For starting a single server, simply go to the `app/` directory and run `npm start`.
+    - Now execute a `loadtest` as before and compare its performance with multiple servers under different conditions.
