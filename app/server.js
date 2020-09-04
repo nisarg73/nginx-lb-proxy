@@ -8,6 +8,7 @@ const PORT = '3110'
 const app = express()
 
 app.get('/', (req, res) => {
+  console.log('Hit!')
   res.send('Hello, World!')
 })
 

@@ -1,0 +1,20 @@
+version: '3.6'
+
+services:
+  app:
+    build: app
+    volumes:
+      - './app:/usr/src/nginx-lb-proxy/'
+    networks:
+      - load-balancer
+
+  proxy:
+    container_name: proxy-server
+    build: proxy
+    ports:
+      - '3110:3110'
+    networks:
+      - load-balancer
+
+networks:
+  load-balancer:
