@@ -82,7 +82,7 @@ Address 9: 172.19.0.12 nginx-lb-proxy_app_8.nginx-lb-proxy_load-balancer
 Address 10: 172.19.0.10 nginx-lb-proxy_app_6.nginx-lb-proxy_load-balancer
 ```
 
-- Here localhost's `port 3110` was binded to proxy container's `port 80`. So all the requests from `localhost:3110` will be mapped to `proxy-server:80`. Also, none of the app containers are not binded to localhost, so all the app servers are running independently on `port 3110` for their respective containers.
+- Here localhost's `port 3110` was binded to proxy container's `port 3110`. So all the requests from `localhost:3110` will be mapped to `proxy-server:3110`. Also, none of the app containers are not binded to localhost, so all the app servers are running independently on `port 3110` for their _respective containers_.
 
 ```
 $ docker ps
@@ -100,7 +100,7 @@ f687300baaac        nginx-lb-proxy_app     "docker-entrypoint.s…"   35 minutes
 d3222e0a4ed5        nginx-lb-proxy_app     "docker-entrypoint.s…"   35 minutes ago      Up 35 minutes       3110/tcp                         nginx-lb-proxy_app_5
 ```
 
-- Now finally, in `proxy.conf` we defined the proxy server to listen to its `port 80` and redirect all the requests to app server. Since we are having multiple app in our `load-balancer` network, proxy server will use DNS resolver to decide the ip address of the app server to which it will redirect the request.
+- Now finally, in `proxy.conf` we defined the proxy server to listen to its `port 3110` and redirect all the requests to app server. Since we are having multiple app in our `load-balancer` network, proxy server will use DNS resolver to decide the ip address of the app server to which it will redirect the request.
 
 ---
 
